@@ -1,0 +1,5 @@
+__pycache__
+dataset/
+dataset_augmented/
+*.pth
+.DS_Store
