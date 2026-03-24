@@ -14,8 +14,8 @@ from vehicle_controller import create_controller
 
 def parse_args():
     parser = argparse.ArgumentParser(description='BiSeNet Lane Detection Web Streamer')
-    parser.add_argument('--model', '-m', type=str, default='bise.pth',
-                        help='Path to model checkpoint (default: bise.pth)')
+    parser.add_argument('--model', '-m', type=str, default='bisenet-0204.pth',
+                        help='Path to model checkpoint (default: bisenet-0204.pth)')
     parser.add_argument('--n_classes', '-n', type=int, default=2,
                         help='Number of classes: 2 for binary, 5 for multi-class (default: 5)')
     parser.add_argument('--device', '-d', type=str, default='cuda:0',

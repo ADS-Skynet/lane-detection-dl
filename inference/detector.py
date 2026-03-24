@@ -19,12 +19,12 @@ class BiSeNetDetector:
             image_size: (height, width) for model input
             device: Device to run on
         """
-        # Add lib to path for BiSeNet import
-        lib_path = Path(__file__).parent.parent / 'lib'
-        if str(lib_path) not in sys.path:
-            sys.path.insert(0, str(lib_path))
+        # Add parent to path for BiSeNet import
+        parent_path = Path(__file__).parent.parent
+        if str(parent_path) not in sys.path:
+            sys.path.insert(0, str(parent_path))
 
-        from models.bisenetv2 import BiSeNetV2
+        from model.bisenetv2 import BiSeNetV2
 
         if 'cuda' in device and torch.cuda.is_available():
             self.device = torch.device(device)
